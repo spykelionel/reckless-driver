@@ -8,9 +8,11 @@ class GameManager():
     def endGame() -> None:
         pass
 
-class GameObject(GameManager):
-    def __init__(self, m_cash, name, tag, enabled) -> None:
-        super().__init__(m_cash)
+class ObjectPool():
+    pass
+
+class GameObject():
+    def __init__(self, name, tag, enabled) -> None:
         self.name = name
         self.tag = tag
         self.enabled = enabled
@@ -66,14 +68,23 @@ class TrafficCar(GameObject):
         pass
 
 class Sedan(TrafficCar):
+    def __init__(self, name, tag, enabled, damage: int, cash: float) -> None:
+        super().__init__(name, tag, enabled, damage, cash)
+
     def onCollision(self) -> None:
         return super().onCollision()
 
 class Van(TrafficCar):
+    def __init__(self, name, tag, enabled, damage: int, cash: float) -> None:
+        super().__init__(name, tag, enabled, damage, cash)
+
     def onCollision(self) -> None:
         return super().onCollision()
 
 class Truck(TrafficCar):
+    def __init__(self, name, tag, enabled, damage: int, cash: float) -> None:
+        super().__init__(name, tag, enabled, damage, cash)
+
     def onCollision(self) -> None:
         return super().onCollision()
 
