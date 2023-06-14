@@ -61,11 +61,11 @@ class TrafficCar(GameObject):
         self.damage = damage
         self.cash = cash
     
-    def getDamage() -> int:
-        pass
+    def getDamage(self, ) -> int:
+        return self.damage
 
-    def GetCash() -> int:
-        pass
+    def getCash(self, ) -> int:
+        return self.cash
 
 class Sedan(TrafficCar):
     def __init__(self, name, tag, enabled, damage: int, cash: float) -> None:
